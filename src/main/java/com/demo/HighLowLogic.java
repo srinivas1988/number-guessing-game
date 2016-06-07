@@ -38,10 +38,14 @@ public class HighLowLogic {
 
     /**
      * Default Constructor
+     * @param maxNumber maximum number
+     * @param message message
      */
-    public HighLowLogic(int maxNumber) {
+    public HighLowLogic(int maxNumber, String message) {
         this.maxNumber = maxNumber;
-        generateRandomNumber(minNumber, maxNumber);
+        if (message.equalsIgnoreCase("ready")) {
+            generateRandomNumber(minNumber, maxNumber);
+        }
     }
 
     /**
@@ -59,6 +63,7 @@ public class HighLowLogic {
             randomNumbers.add(randomNumber);
         }
         System.out.println("Computer: Is the number " + this.randomNumber + "?");
+        System.out.print("User: ");
     }
 
     /**
@@ -71,12 +76,12 @@ public class HighLowLogic {
      * @return true if answer is yes
      */
     public boolean guess(String answer) {
-        System.out.println("Answer: " + answer);
         if (answer.equalsIgnoreCase("yes")) {
             System.out.println("Congratulations You have Won The Game!!!!");
+            System.out.println("Thanks for Playing the Game.");
             return true;
         } else if (answer.equalsIgnoreCase("higher")) {
-            if (randomNumber == maxNumber - 1) {
+            if (randomNumber == maxNumber) {
                 System.out.println("You have reached maximum range. So please enter lower!!!");
             } else {
                 minNumber = randomNumber;

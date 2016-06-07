@@ -14,10 +14,13 @@ public class NumberGuessingGame {
 
     public static void main(String args[]) {
         boolean result = false;
+        int range = 0;
         Scanner scan = new Scanner(System.in);
-        System.out.println("Welcome to Number Guessing Game.");
-        System.out.println("Select the Range for Today's Game.");
-        HighLowLogic highLowLogic = new HighLowLogic(scan.nextInt());
+        System.out.println("Welcome to Number Guessing Game.\n");
+        System.out.print("Enter the Range for Today's Game: ");
+        range = scan.nextInt();
+        System.out.print("Type ready whenever you want to start: ");
+        HighLowLogic highLowLogic = new HighLowLogic(range, scan.next());
 
         while(!result) {
             result = highLowLogic.guess(scan.next());
