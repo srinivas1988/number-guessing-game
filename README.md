@@ -18,4 +18,5 @@ If you simply want to clone the repo and play, you can run do so with:
 
 
 Use the following maven command to play Number Guessing Game.
+
     mvn exec:java
