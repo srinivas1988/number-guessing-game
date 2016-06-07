@@ -12,10 +12,10 @@ The game works as follows:
 
 If you simply want to clone the repo and play, you can run do so with:
 
-git clone git@github.com:srinivas1988/number-guessing-game.git
-cd number-guessing-game
-mvn clean install -DskipTests
+    git clone git@github.com:srinivas1988/number-guessing-game.git
+    cd number-guessing-game
+    mvn clean install -DskipTests
 
 
 Use the following maven command to play Number Guessing Game.
-mvn exec:java
+    mvn exec:java
